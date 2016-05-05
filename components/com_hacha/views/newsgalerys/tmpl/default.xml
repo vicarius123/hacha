@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_HACHA_TITLE_LIST_VIEW_NEWSGALERYS" option="View">
+        <message>
+                        <![CDATA[COM_HACHA_TITLE_LIST_VIEW_NEWSGALERYS_DESC]]>
+        </message>
+	</layout>
+</metadata>

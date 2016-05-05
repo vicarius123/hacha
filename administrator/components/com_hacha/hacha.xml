@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_hacha</name>
+    <creationDate>2016-04-01</creationDate>
+    <copyright>2016 nOne.ru</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Cristopher Chong</author>
+    <authorEmail>cris_chong2@hotmail.com</authorEmail>
+    <authorUrl>http://none.ru</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>AIO Component - menu - news</description>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>hacha.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <media destination="com_hacha" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages folder="languages/site">
+        
+			<language tag="en-GB">en-GB/en-GB.com_hacha.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_hacha.ini</language>
+    </languages>
+    <administration>
+        <menu img="media/com_hacha/images/s_com_hacha.png" >COM_HACHA</menu>
+        <submenu>
+            
+			<menu link="option=com_hacha&amp;view=categorys" view="categorys" img="media/com_hacha/images/s_categorys.png" alt="Hacha/Categorys">Categories</menu>
+
+			<menu link="option=com_hacha&amp;view=items" view="items" img="media/com_hacha/images/s_items.png" alt="Hacha/Items">COM_HACHA_TITLE_ITEMS</menu>
+
+			<menu link="option=com_categories&amp;extension=com_hacha" view="categories" img="media/com_hacha/images/s_items.png" alt="Hacha/Categories">COM_HACHA_ITEMS_CATEGORY_ID</menu>
+
+			<menu link="option=com_hacha&amp;view=newsgalerys" view="newsgalerys" img="media/com_hacha/images/s_newsgalerys.png" alt="Hacha/Newsgalerys">COM_HACHA_TITLE_NEWSGALERYS</menu>
+
+			<menu link="option=com_hacha&amp;view=news522125" view="news522125" img="media/com_hacha/images/s_news522125.png" alt="Hacha/News522125">COM_HACHA_TITLE_NEWS522125</menu>
+
+			<menu link="option=com_hacha&amp;view=tags" view="tags" img="media/com_hacha/images/s_tags.png" alt="Hacha/Tags">COM_HACHA_TITLE_TAGS</menu>
+
+			<menu link="option=com_hacha&amp;view=newstags" view="newstags" img="media/com_hacha/images/s_newstags.png" alt="Hacha/Newstags">COM_HACHA_TITLE_NEWSTAGS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>hacha.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="en-GB">en-GB/en-GB.com_hacha.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_hacha.sys.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_hacha.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_hacha.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+        <plugin group="search" plugin="hacha"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

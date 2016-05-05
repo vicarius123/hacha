@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search">
+    <name>plg_search_hacha</name>
+    <author>Cristopher Chong</author>
+    <creationDate>2016-04-01</creationDate>
+    <copyright>2016 nOne.ru</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>cris_chong2@hotmail.com</authorEmail>
+    <authorUrl>http://none.ru</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>PLG_SEARCH_COM_HACHA_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="hacha">hacha.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="../../../languages/site/search/hacha">
+        
+			<language tag="en-GB">../../../languages/plugins/search/hacha/en-GB/en-GB.plg_search_hacha.ini</language>
+			<language tag="en-GB">../../../languages/plugins/search/hacha/en-GB/en-GB.plg_search_hacha.sys.ini</language>
+			<language tag="ru-RU">../../../languages/plugins/search/hacha/ru-RU/ru-RU.plg_search_hacha.ini</language>
+			<language tag="ru-RU">../../../languages/plugins/search/hacha/ru-RU/ru-RU.plg_search_hacha.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+                <field name="search_limit" type="text" default="50" size="5"
+                       description="PLG_SEARCH_COM_HACHA_FIELD_SEARCHLIMIT_DESC"
+                       label="PLG_SEARCH_COM_HACHA_FIELD_SEARCHLIMIT_LABEL" />
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

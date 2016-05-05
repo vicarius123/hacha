@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		
+        <field name="id"
+		type="text"
+		default="0"
+		label="COM_HACHA_FORM_LBL_ITEM_ID"
+		readonly="true"
+		class="readonly"
+		description="JGLOBAL_FIELD_ID_DESC"
+		/> 
+		
+		<field name="title_en"
+		type="text"
+		label="Название"
+		description="COM_HACHA_FORM_DESC_ITEM_TITLE_EN" 
+		/> 
+		<field name="title"
+		type="text"
+		label="Название"
+		description="COM_HACHA_FORM_DESC_ITEM_TITLE" 
+		/> 
+		<field name="category_id"
+		type="sql"
+		label="Категория"
+		description="COM_HACHA_FORM_DESC_ITEM_CATEGORY_ID" 
+		extension="com_hacha"
+		query="SELECT id,title FROM #__menu_category WHERE state = 1 "
+		key_field="id" 
+		value_field="title" 
+		/> 
+		
+		
+		<field name="image"
+		type="media"
+		label="Картинка"
+		description="COM_HACHA_FORM_DESC_ITEM_IMAGE" 
+		/> 
+		
+		
+		
+		
+		
+		<field name="text"
+		type="editor"
+		label="Состав"
+		description="COM_HACHA_FORM_DESC_ITEM_TEXT" 
+		width="300px"
+		/> 
+		<field name="text_en"
+		type="editor"
+		label="Состав"
+		description="COM_HACHA_FORM_DESC_ITEM_TEXT_EN" 
+		width="300px"
+		/> 
+		<field name="price"
+		type="text"
+		size="40"
+		class="inputbox"
+		label="Цена"
+		description="COM_HACHA_FORM_DESC_ITEM_PRICE" 
+		filter="safehtml"
+		/> 
+		
+		
+		<field name="weight"
+		type="text"
+		label="Выход в граммах"
+		description="COM_HACHA_FORM_DESC_ITEM_WEIGHT" 
+		/> 
+		
+		<field name="enable"
+		type="checkbox"
+		size="40"
+		class="inputbox"
+		label="COM_HACHA_FORM_LBL_ITEM_ENABLE"
+		description="COM_HACHA_FORM_DESC_ITEM_ENABLE" 
+		filter="safehtml"
+		/> 
+		
+		
+		
+		
+		
+		
+		
+
+		
+		<field name="delivery" type="radio" default="0" label="Доставка" description="">
+		  <option value="0">Нет</option>
+		  <option value="1">Да</option>
+		</field>
+		
+		<field name="min_count"
+		type="text"
+		size="40"
+		class="inputbox"
+		label="COM_HACHA_FORM_LBL_ITEM_MIN_COUNT"
+		description="COM_HACHA_FORM_DESC_ITEM_MIN_COUNT" 
+		filter="safehtml"
+		/> 
+		
+		
+		<field name="created_by"
+		type="createdby"
+		default=""
+		label="COM_HACHA_FORM_LBL_ITEM_CREATED_BY"
+		description="COM_HACHA_FORM_DESC_ITEM_CREATED_BY" 
+		/> 
+		
+		
+		<field name="version_note"
+		type="text"
+		label="JGLOBAL_FIELD_VERSION_NOTE_LABEL"
+		description="JGLOBAL_FIELD_VERSION_NOTE_DESC"
+		class="inputbox"
+		size="45"
+		labelclass="control-label"
+		/> 
+		
+		
+		<field name="state"
+		type="list"
+		label="JSTATUS"
+		description="JFIELD_PUBLISHED_DESC"
+		class="inputbox"
+		size="1"
+		default="0"
+		>
+			<option value="1">JPUBLISHED</option>
+			<option value="0">JUNPUBLISHED</option>
+			<option value="2">JARCHIVED</option>
+			<option value="-2">JTRASHED</option>
+		</field> 
+		
+		
+		<field name="checked_out"
+		type="hidden"
+		filter="unset"
+		/>
+		
+		<field name="checked_out_time"
+		type="hidden"
+		filter="unset"
+		/>
+		
+	</fieldset>
+	
+</form>
