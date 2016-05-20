@@ -1,4 +1,4 @@
-﻿jQuery(document).ready(function(){
+jQuery(document).ready(function(){
 	(function() {
 		ymaps.ready(function() {
 			var coder = ymaps.geocode("Москва, Большой Гнездниковский переулок, дом 10");
@@ -182,7 +182,7 @@
 	
 	//url menu switcher//
 	
-	if (window.location.href.indexOf("ru/menu/items") > -1) {
+	if (window.location.href.indexOf("ru/menu/category") > -1) {
 		var pathname = window.location.pathname;
 		
 		var new_url = pathname.replace('ru','en');
@@ -190,7 +190,7 @@
 		console.log(new_url);
 	}
 	
-	if (window.location.href.indexOf("en/menu/items") > -1) {
+	if (window.location.href.indexOf("en/menu/category") > -1) {
 		var pathname = window.location.pathname;
 		
 		var new_url = pathname.replace('en','ru');
