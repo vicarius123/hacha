@@ -182,7 +182,7 @@ jQuery(document).ready(function(){
 	
 	//url menu switcher//
 	
-	if (window.location.href.indexOf("ru/menu/category") > -1) {
+	if (window.location.href.indexOf("en/menu/category/") > -1) {
 		var pathname = window.location.pathname;
 		
 		var new_url = pathname.replace('ru','en');
@@ -190,7 +190,7 @@ jQuery(document).ready(function(){
 		console.log(new_url);
 	}
 	
-	if (window.location.href.indexOf("en/menu/category") > -1) {
+	if (window.location.href.indexOf("en/menu/category/") > -1) {
 		var pathname = window.location.pathname;
 		
 		var new_url = pathname.replace('en','ru');
